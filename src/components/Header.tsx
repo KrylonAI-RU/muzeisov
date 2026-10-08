@@ -14,10 +14,11 @@ export const Header: React.FC<HeaderProps> = ({ coins, onOpenMatchbox }) => {
         {/* Zone 1: Brand title wordmark */}
         <a 
           href="#" 
-          className="text-base sm:text-lg font-bold tracking-tight text-white hover:text-amber-400 transition-colors whitespace-nowrap font-display uppercase flex items-center gap-2"
+          className="text-sm sm:text-lg font-bold tracking-tight text-white hover:text-amber-400 transition-colors whitespace-nowrap font-display uppercase flex items-center gap-2 truncate mr-2"
         >
-          <span className="inline-block w-2.5 h-2.5 rounded-full bg-red-600"></span>
-          <span>Музей советских игровых автоматов</span>
+          <span className="inline-block w-2.5 h-2.5 rounded-full bg-red-600 shrink-0"></span>
+          <span className="hidden sm:inline">Музей советских игровых автоматов</span>
+          <span className="inline sm:hidden">Музей автоматов</span>
         </a>
 
         {/* Zone 2: Navigation links */}

@@ -38,41 +38,44 @@ export const SimulatorsSection: React.FC<SimulatorsSectionProps> = ({
           </div>
 
           {/* Simulator switcher tabs */}
-          <div className="flex flex-wrap items-center gap-2 p-1.5 rounded-xl bg-stone-900 border border-stone-800 self-start md:self-auto">
+          <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 p-1.5 rounded-xl bg-stone-900 border border-stone-800 w-full sm:w-auto">
             <button
+              type="button"
               onClick={() => setActiveSim('morskoi-boi')}
-              className={`flex items-center gap-2 px-3.5 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider transition-colors ${
+              className={`flex-1 sm:flex-initial flex items-center justify-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider transition-colors cursor-pointer touch-manipulation ${
                 activeSim === 'morskoi-boi'
-                  ? 'bg-blue-700 text-white'
+                  ? 'bg-blue-700 text-white shadow-md'
                   : 'text-stone-400 hover:text-white'
               }`}
             >
               <Play className="w-3.5 h-3.5" />
-              «Морской бой» (1973)
+              <span>«Морской бой»</span>
             </button>
 
             <button
+              type="button"
               onClick={() => setActiveSim('basketball')}
-              className={`flex items-center gap-2 px-3.5 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider transition-colors ${
+              className={`flex-1 sm:flex-initial flex items-center justify-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider transition-colors cursor-pointer touch-manipulation ${
                 activeSim === 'basketball'
-                  ? 'bg-purple-700 text-white'
+                  ? 'bg-purple-700 text-white shadow-md'
                   : 'text-stone-400 hover:text-white'
               }`}
             >
               <Trophy className="w-3.5 h-3.5" />
-              «Баскетбол» (1982)
+              <span>«Баскетбол»</span>
             </button>
 
             <button
+              type="button"
               onClick={() => setActiveSim('magistral')}
-              className={`flex items-center gap-2 px-3.5 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider transition-colors ${
+              className={`flex-1 sm:flex-initial flex items-center justify-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider transition-colors cursor-pointer touch-manipulation ${
                 activeSim === 'magistral'
-                  ? 'bg-emerald-700 text-white'
+                  ? 'bg-emerald-700 text-white shadow-md'
                   : 'text-stone-400 hover:text-white'
               }`}
             >
               <Gauge className="w-3.5 h-3.5" />
-              «Магистраль» (1977)
+              <span>«Магистраль»</span>
             </button>
           </div>
         </div>
